@@ -1,37 +1,31 @@
-terraform {
-  required_providers {
-    docker = {
-      source  = "kreuzwerker/docker"
-      version = "~> 3.0"
-    }
-  }
+  # host = "unix:///Users/<your-username>/.colima/default/docker.sock"
+
+  # Windows + Docker Desktop
+  # host = "npipe:////./pipe/docker_engine"
+
+  # Linux / macOS Docker Desktop
+  # host = "unix:///var/run/docker.sock"
 }
 
-# Docker provider for Linux (default Unix socket)
-provider "docker" {
-  host = "unix:///var/run/docker.sock"
-}
-
-# Pull nginx image
+# ----------------------------
+# Pull Nginx Docker image
+# ----------------------------
 resource "docker_image" "nginx" {
-  name = "nginx:latest"
+  name         = "nginx:latest"
+  keep_locally = true
 }
 
-# Run nginx container
-resource "docker_container" "nginx" {
-  name  = "nginx-server"
-  image = docker_image.nginx.latest
+# ----------------------------
+# Run Nginx container
+# ----------------------------
+resource "docker_container" "nginx_container" {
+  name  = "my-nginx"
+  image = docker_image.nginx.name   # <-- use .name, NOT .latest
+
   ports {
     internal = 80
     external = 3000
   }
 }
 
-# Optional: build local Dockerfile (if you have one)
-# resource "docker_image" "my_app" {
-#   name = "my-app:latest"
-#   build {
-#     context    = "/home/ubuntu/projects/myapp"  # Linux-style path
-#     dockerfile = "/home/ubuntu/projects/myapp/Dockerfile"
-#   }
-# }
+-- INSERT --                                                                                                                     47,19         Bot
