@@ -27,8 +27,6 @@ provider "docker" {
   # host = "unix:///var/run/docker.sock"
 }
 
-}
-
 # ----------------------------
 # Pull Nginx Docker image
 # ----------------------------
