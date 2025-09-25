@@ -159,6 +159,7 @@ Step 2: Run the sh file to download terraform and docker:
 ```
 Step 3: Run Terraform Commands
 ```bash
+   sudo usermod -aG docker $USER
    terraform init
    terraform validate
    terraform plan
@@ -178,7 +179,7 @@ Step 5: Access the webpage deployed
  * Deployed on port 3000
  * Search on any search engine
    ```bash
-   http://localhost:3000
+   http://public IP:3000
    ```
 --
 Step 6: Destroy the Complete Infrastructure:
