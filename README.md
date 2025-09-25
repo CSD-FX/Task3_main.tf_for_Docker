@@ -73,6 +73,7 @@ Step 5: Check the docker container and terraform state:
 ```
 ```bash
    terraform state pull
+   terraform state list
 ```
 --
 Step 6: Access the webpage deployed
@@ -129,6 +130,7 @@ Step 4: Check the docker container and terraform state:
 ```
 ```bash
    terraform state pull
+   terraform state list
 ```
 --
 Step 5: Access the webpage deployed
@@ -169,6 +171,7 @@ Step 4: Check the docker container and terraform state:
 ```
 ```bash
    terraform state pull
+   terraform state list
 ```
 --
 Step 5: Access the webpage deployed
