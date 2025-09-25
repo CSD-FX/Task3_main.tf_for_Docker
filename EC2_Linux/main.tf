@@ -1,3 +1,23 @@
+terraform {
+  required_providers {
+    docker = {
+      source  = "kreuzwerker/docker"
+      version = "~> 3.0.2"
+    }
+  }
+}
+
+# ----------------------------
+# Docker provider configuration
+# ----------------------------
+
+# macOS + Colima: set host to Colima socket
+# macOS + Docker Desktop or Linux: default works
+# Windows + Docker Desktop: set host to named pipe
+provider "docker" {
+  # Uncomment the line that applies to your OS:
+
+  # macOS + Colima
   # host = "unix:///Users/<your-username>/.colima/default/docker.sock"
 
   # Windows + Docker Desktop
@@ -5,6 +25,8 @@
 
   # Linux / macOS Docker Desktop
   # host = "unix:///var/run/docker.sock"
+}
+
 }
 
 # ----------------------------
@@ -27,5 +49,3 @@ resource "docker_container" "nginx_container" {
     external = 3000
   }
 }
-
--- INSERT --                                                                                                                     47,19         Bot
