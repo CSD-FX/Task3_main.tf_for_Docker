@@ -75,7 +75,14 @@ Step 5: Check the docker container and terraform state:
    terraform state pull
 ```
 --
-Step 6: Destroy the Complete Infrastructure:
+Step 6: Access the webpage deployed
+ * Deployed on port 3000
+ * Search on any search engine
+   ```bash
+   http://localhost:3000
+   ```
+--
+Step 7: Destroy the Complete Infrastructure:
 ```bash
    terraform destroy
 ```
@@ -124,7 +131,14 @@ Step 4: Check the docker container and terraform state:
    terraform state pull
 ```
 --
-Step 5: Destroy the Complete Infrastructure:
+Step 5: Access the webpage deployed
+ * Deployed on port 3000
+ * Search on any search engine
+   ```bash
+   http://localhost:3000
+   ```
+--
+Step 6: Destroy the Complete Infrastructure:
 ```bash
    terraform destroy
 ```
@@ -157,7 +171,14 @@ Step 4: Check the docker container and terraform state:
    terraform state pull
 ```
 --
-Step 5: Destroy the Complete Infrastructure:
+Step 5: Access the webpage deployed
+ * Deployed on port 3000
+ * Search on any search engine
+   ```bash
+   http://localhost:3000
+   ```
+--
+Step 6: Destroy the Complete Infrastructure:
 ```bash
    terraform destroy
 ```
