@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "docker" {
-    host = "unix:///Users/apple/.colima/default/docker.sock"
+    host = "unix:///Users/<Your_local_user_name>/.colima/default/docker.sock"
 }
 
 
